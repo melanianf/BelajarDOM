@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style-hw5.css" />
+  </head>
+  <body>
+    <h2>Formulir Pendaftaran</h2>
+    <!-- <p>Click on the buttons inside the tabbed menu:</p> -->
+
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'registrasi')">
+        Registrasi
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'list-peserta')">
+        List Peserta
+      </button>
+    </div>
+
+    <div id="registrasi" class="tabcontent">
+      <form id="form-registrasi" onsubmit="">
+        <label for="nama"><b>Nama</b></label>
+        <hr />
+        <input
+          type="text"
+          placeholder="Masukkan Nama"
+          name="nama"
+          id="nama"
+          value=""
+          required
+        />
+        <hr />
+        <label for="umur"><b>Umur</b></label>
+        <hr />
+        <input
+          type="text"
+          placeholder="Masukkan Umur"
+          name="umur"
+          id="umur"
+          value=""
+          required
+        />
+        <hr />
+        <label for="sangu"><b>Uang Sangu</b></label>
+        <hr />
+        <input
+          type="number"
+          placeholder="Masukkan Uang Sangu"
+          name="sangu"
+          id="sangu"
+          value=""
+          required
+        />
+        <hr />
+        <input type="button" value="Submit" onclick="setAction()" />
+      </form>
+    </div>
+
+    <div id="list-peserta" class="tabcontent">
+      <div id="empTable"></div>
+      <p id="ratarataUmur"></p>
+      <p id="ratarataSangu"></p>
+    </div>
+    <script src="hw5.js"></script>
+  </body>
+</html>
